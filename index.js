@@ -9,6 +9,9 @@ async function run() {
 
         // Get owner and repo from context of payload that triggered the action
         const { owner, repo } = context.repo
+        console.log("Owner: " + owner);
+        console.log("Repo: " + repo);
+        console.log("Token: " + process.env.GITHUB_TOKEN);
 
         const github = new GitHub(process.env.GITHUB_TOKEN);
         var exists = 'false';
